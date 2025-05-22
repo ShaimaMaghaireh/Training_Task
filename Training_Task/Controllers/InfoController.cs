@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Xml.Linq;
 using Training_Task.Models;
 
 namespace Training_Task.Controllers
@@ -23,5 +24,55 @@ namespace Training_Task.Controllers
             myInfo.City = "Irbid";
             return View(myInfo);
         }
+       
+        public ActionResult name(int? id)
+        {
+            Info info = getinfo(id);
+            return View(info);
+        }
+
+        public Info getinfo (int? id )
+        {
+          Info info = new Info();
+           
+            switch (id)
+            {
+                case 1:
+                  info.Name = "Shaimaa";
+                    info.Major = "Software Engineer";
+                    info.Course = "Feild Training";
+                    info.Age = 21;
+                    info.Email = "example@gmail.com";
+                    info.City = "Irbid";
+                    info.University = "Ajloun National University";
+                    break;
+
+                case 2:
+                    info.Name = "Rooa";
+                    info.Major = "Computer Engineer";
+                    info.Course = "Feild Training";
+                    info.Age = 21;
+                    info.Email = "example@gmail.com";
+                    info.City = "Irbid";
+                    info.University = "JUST";
+                    break;
+
+                case 3:
+                    info.Name = "Hamzah";
+                    info.Major = "Software Engineer";
+                    info.Course = "Feild Training";
+                    info.Age = 21;
+                    info.Email = "example@gmail.com";
+                    info.City = "Irbid";
+                    info.University = "Al-Hussain Bin Talal";
+                    break;
+
+            }
+            return info;
+        }
+
+       
+
+
     }
-}
+        }

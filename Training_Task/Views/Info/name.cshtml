@@ -1,0 +1,24 @@
+﻿@model Training_Task.Models.Info
+@{
+    ViewBag.Title = "name";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<table border="1px" style="border-collapse:separate">
+    <thead border="1px">
+        <tr>
+        <td><h2>@Model.Name</h2></td>
+        <td><h2> Details </h2></td>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr><td>  <p><strong>University:</strong> @Model.University</p></td></tr>
+        <tr><td>  <p><strong>Major:</strong> @Model.Major</p></td></tr>
+        <tr><td>  <p><strong>Course:</strong> @Model.Course</p></td></tr>
+        <tr><td><p><strong>Age:</strong> @Model.Age</p></tr> </td>
+        <tr><td> <p><strong>Skills:</strong> @Model.Skills</p></tr></td>
+        <tr><td><p><strong>Email:</strong> @Model.Email</p></tr></td>
+        <tr><td> <p><strong>City:</strong> @Model.City</p></tr></td>
+    </tbody>
+</table>
+<a href="@Url.Action("Index","info")">Go to Home</a>
