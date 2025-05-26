@@ -1,0 +1,22 @@
+﻿@model MvcFormExample.Models.UserInputViewModel
+
+@{
+    ViewBag.Title = "User Form";
+}
+
+<h2>User Form</h2>
+
+@using (Html.BeginForm("SaveData", "Form", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Age)
+        @Html.TextBoxFor(m => m.Age)
+    </div>
+
+    <button type="submit">Save</button>
+}
